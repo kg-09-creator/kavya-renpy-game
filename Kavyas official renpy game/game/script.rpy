@@ -28,6 +28,26 @@ label start:
 
     e "I've been waiting for someone to talk to."
 
+    menu: 
+        "Go outside.":
+            jump outside
+
+        "Stay in this room.":
+            jump stay
+
+    label outside: 
+
+            scene bg whitehouse with dissolve
+            show eileen concerned
+
+            e "It's freezing out here!"
+            return
+
+    label stay:
+
+        show eileen happy
+        e "Much better. It's warm in here."
+        return 
     # This ends the game.
 
     return
