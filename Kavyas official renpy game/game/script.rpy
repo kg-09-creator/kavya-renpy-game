@@ -13,8 +13,21 @@ label start:
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
+    scene black
+    "BZZZZZZ....BZZZZZ...BZZZZZ!!"
 
-    scene bg room with dissolve
+    menu: 
+        "Wake up...":
+            jump wake up
+
+    label wake up:
+        scene bg room with dissolve
+        show eileen sleepy 
+
+        e "Wha..? Wh-Where am I...?"
+
+    show eileen turn right
+    
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -26,7 +39,7 @@ label start:
 
     e "Welcome to my game!"
 
-    e "I've been waiting for someone to talk to."
+    e "I've been waiting for someone to talk to. Do you want to go outside, or stay in here with me?"
 
     menu: 
         "Go outside.":
