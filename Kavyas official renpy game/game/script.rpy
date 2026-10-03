@@ -4,7 +4,7 @@
 # name of the character.
 
 define e = Character("Eileen", color="#c8ffc8")
-define l = Character("Lorelai" color="#f9d6f2")
+define l = Character("Lorelai", color="#f9d6f2")
 
 
 # The game starts here.
@@ -49,7 +49,7 @@ label start:
 
     # These display lines of dialogue.
 
-    e "Welcome to my game!"
+    show bubble
 
     e "I've been waiting for someone to talk to. Do you want to go outside, or stay in here with me?"
 
