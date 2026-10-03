@@ -78,9 +78,9 @@ label start:
         l "Oh I'm sure you have, it's probably just early-morning sleepiness making you forget. Now come downstairs!"
         
         scene bg downstairs with dissolve
-            show eileen uncertain
-            show joelle happy
-            "Hi Eileen! What's up? You ready for today?"
+        show eileen uncertain
+        show joelle happy
+        j "Hi Eileen! What's up? You ready for today?"
         return 
 
     label downstairs: 
