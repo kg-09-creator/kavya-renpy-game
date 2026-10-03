@@ -5,6 +5,7 @@
 
 define e = Character("Eileen", color="#c8ffc8")
 define l = Character("Lorelai", color="#f9d6f2")
+define j = Character("Joelle", color="#abd2ff")
 
 
 # The game starts here.
@@ -37,7 +38,7 @@ label start:
 
     e "Where am I? I've never seen this place before..."
 
-    show bedroom door open
+    show bg bedroom door open
     show lorelai morning 
     l "Eileen! You're finally awake!"
 
@@ -45,34 +46,63 @@ label start:
     e "What..? My name's not Eileen, it's-"
 
     show lorelai lighthearted
-    l "Oh Eileen, stop joking around so early in the morning! Come downstairs, Joelle's waiting for you! It's the big day, remember? Aren't you excited?"
+    l "Oh Eileen, stop joking around so early in the morning! Come downstairs, everyone's waiting for you! It's the big day, remember? Aren't you excited?"
 
     # These display lines of dialogue.
 
-    show bubble
+    show eileen thinking
 
-    e "I've been waiting for someone to talk to. Do you want to go outside, or stay in here with me?"
+    e "Should I stay here or play along as Eileen and go downstairs...? I don't know what's going to happen..."
 
     menu: 
-        "Go outside.":
-            jump outside
+        "Go downstairs.":
+            jump downstairs
 
         "Stay in this room.":
             jump stay
 
-    label outside: 
-
-            scene bg whitehouse with dissolve
-            show eileen concerned
-
-            e "It's freezing out here!"
-            return
-
     label stay:
 
-        show eileen happy
-        e "Much better. It's warm in here."
+        show eileen uncertain
+        e "Ummm, I think I'll stay here, thanks."
+        l "Why? Are you feeling okay?"
+        e "Yeah, I'm feeling fine. I just don't want to come downstairs right now. You guys carry on, no need to worry about me! Heh heh..."
+        show lorelai lighthearted
+        l "Nonsense, it's such a big day! Don't you remember? You're coming downstairs whether you like it or not."
+        e "There's no need for that-"
+        show lorelai pulling eileen out of bed 
+        l "Come on now-"
+        show eileen wrist tattoo
+        l "Oh Eileen, did you get a tattoo?"
+        e "No... wait what? I've never seen this before in my life-"
+        l "Oh I'm sure you have, it's probably just early-morning sleepiness making you forget. Now come downstairs!"
+        
+        scene bg downstairs with dissolve
+            show eileen uncertain
+            show joelle happy
+            "Hi Eileen! What's up? You ready for today?"
         return 
+
+    label downstairs: 
+
+            scene bg downstairs with dissolve
+            show eileen uncertain
+            show joelle excited
+
+            j "Eileen! There she is!"
+            show joelle and eileen hug awkward
+            e "Umm... hi- Joelle."
+            j "You ready for today? How do you feel?"
+            e "Great... if only I knew why this is such a big day for me..."
+            j "Did you forget? It's the day you finally got your drivers' license!"
+            e "Right...my driver's license...!"
+            j "No, I'm just kidding - you got that last week, remember? But jokes aside, it is a big day. Today's the day Great Aunt Bellona's will is to be read. We have to host the memorial banquet tonight at her mansion - and we need to leave in an hour to oversee the preparations."
+            e "Right... Great Aunt Bellona. And the banquet today - how could I forget?"
+            return
+
+
     # This ends the game.
+
+    # story - amnesiac [insert her actual name here] wakes up in a mansion she's never seen surrounded by ppl she's never met on the day the matriarch's will is to be read 
 
     return
