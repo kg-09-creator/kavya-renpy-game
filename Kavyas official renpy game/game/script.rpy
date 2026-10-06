@@ -105,7 +105,7 @@ label start:
             e "Right... wait, fortune?"
             j "Yeah... Great Aunt Bellona's mansions, money, and her cars... since she was everyone's favorite aunt, there's a lot of sentiment around her possessions. Anyway, we have to leave now if we want to get to her mansion on time. You coming?"
           
-        menu: 
+    menu: 
         "Go to the banquet and see what's up with her fortune.":
             jump banquet
 
@@ -123,10 +123,18 @@ label start:
         e "Where should I look first?"
     
     menu: 
-    "Open the drawers and see if there's anything useful in there.":
+        "Open the drawers and see if there's anything useful in there.":
             jump drawers 
-    "Log onto the computer and see if you can find anything useful on there."
+        "Log onto the computer and see if you can find anything useful on there.":
             jump computer
+    
+    label drawers:
+        e "Old letters, papers, nothing that relates to me...or Eileen. Wait... didn't Joelle mention a drivers' license? Let me see if I can find that..."
+        e "Here it is! Eileen Callaghan... she has the same birthday and face as me - which would explain why everyone thinks I'm Eileen... let me see if I can look into the DMV records to see when the processing for this happened. It might give me a better idea on who Eileen really is."
+        j "Eileen? I'm back! We were halfway to the mansion when I realized I forgot my phone! Can you believe it?"
+        e "Joelle! Hi-"
+        j "What are you doing in here...? I thought you'd be resting because of your headache."
+        e "I, uh, wanted to see if I could find some medicine! But I'm all better now so I guess I don't need any!"
 
 
     label banquet:
@@ -150,7 +158,18 @@ label start:
         show Halloway glance
         m "Halloway. It's not like you to forget my name, dear, after I raised you all these years. Is everything alright?"
         e "Yes, everything's fine, ma'am..."
-        m ""
+        m "Okay, just making sure. To prepare for tonight's banquet, I thought we'd decorate the place with flowers in memory of Lady Bellona. Since you were her favorite niece, I thought you could tell me what her favorite flowers were."
+        e "Right, um... she really loved daffodils...?"
+        m "Daffodils...that's intriguing. Oh, I see Lorelai over by the flowers."
+        l "Hi guys! Mr. Primrose mentioned you wanted to decorate the place with Great Aunt Bellona's favorite flowers, so I asked the florist for four dozen sunflowers."
+        m "Sunflowers...Eileen mentioned she was fond of daffodils."
+        l "That's odd... she never liked daffodils because they end up killing other plants if they're placed together. She favored sunflowers because of their ability to brighten up a room."
+        m "I thought so as well...anyway, Eileen, do you want to come with me to check on the study to make sure everything's ready for the will reading, or greet the guests in the Great Hall?"
+    menu: 
+        "Go with Mrs. Halloway to check on the will reading ceremony and maybe get a glimpse on whether Eileen is set to inherit anything.":
+            jump study 
+        "Head to the Great Hall to avoid any further suspicion from Mrs. Halloway.":
+            jump greet
 
 
 
