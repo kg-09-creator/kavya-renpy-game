@@ -6,6 +6,7 @@
 define e = Character("Eileen", color="#c8ffc8")
 define l = Character("Lorelai", color="#f9d6f2")
 define j = Character("Joelle", color="#abd2ff")
+define h = Character("Mrs. Halloway", color="#ffe8bf")
 
 
 # The game starts here.
@@ -68,19 +69,21 @@ label start:
         l "Why? Are you feeling okay?"
         e "Yeah, I'm feeling fine. I just don't want to come downstairs right now. You guys carry on, no need to worry about me! Heh heh..."
         show lorelai lighthearted
-        l "Nonsense, it's such a big day! Don't you remember? You're coming downstairs whether you like it or not."
+        l "Nonsense, it's such an important day! Don't you remember? You're coming downstairs whether you like it or not."
         e "There's no need for that-"
         show lorelai pulling eileen out of bed 
         l "Come on now-"
         show eileen wrist tattoo
         l "Oh Eileen, did you get a tattoo?"
         e "No... wait what? I've never seen this before in my life-"
-        l "Oh I'm sure you have, it's probably just early-morning sleepiness making you forget. Now come downstairs!"
+        l "Well... I'm sure you have, it couldn't have shown up out of nowhere... it's probably just early-morning sleepiness making you forget. Now come downstairs!"
         
         scene bg downstairs with dissolve
         show eileen uncertain
         show joelle happy
-        j "Hi Eileen! What's up? You ready for today?"
+        j "Hi Eileen! You ready for today?"
+        e "Hi- Joelle. Sure I am- but remind me again, what's today...?"
+        l ""
         return 
 
     label downstairs: 
@@ -94,15 +97,65 @@ label start:
             e "Umm... hi- Joelle."
             j "You ready for today? How do you feel?"
             e "Great... if only I knew why this is such a big day for me..."
-            j "Did you forget? It's the day you finally got your drivers' license!"
+            j "Did you forget? It's the day you finally get your drivers' license!"
             e "Right...my driver's license...!"
             j "No, I'm just kidding - you got that last week, remember? But jokes aside, it is a big day. Today's the day Great Aunt Bellona's will is to be read. We have to host the memorial banquet tonight at her mansion - and we need to leave in an hour to oversee the preparations."
             e "Right... Great Aunt Bellona. And the banquet today - how could I forget?"
-            return
+            j "Yup. The big day where we see who she left her fortune to."
+            e "Right... wait, fortune?"
+            j "Yeah... Great Aunt Bellona's mansions, money, and her cars... since she was everyone's favorite aunt, there's a lot of sentiment around her possessions. Anyway, we have to leave now if we want to get to her mansion on time. You coming?"
+          
+        menu: 
+        "Go to the banquet and see what's up with her fortune.":
+            jump banquet
+
+        "Stay here and investigate.":
+            jump investigate
+    
+    label investigate: 
+        e "Actually, I think I'm gonna stay here today. I'm not feeling that great."
+        l "What happened? Are you okay?"
+        e "I'm fine, just a bad headache. I didn't sleep well tonight. You guys go ahead and let me know what happens. I might come later if I feel better."
+        j "Okay... we'll let everyone know why you weren't able to come. Rest well."
+        show lj leaving for banquet
+        e "*thinking:* now that they're gone, i'll try to look around and see if i can find any clues as to how i got here and why everyone thinks i'm eileen. i'll start with the office room."
+        scene office
+        e "Where should I look first?"
+    
+    menu: 
+    "Open the drawers and see if there's anything useful in there.":
+            jump drawers 
+    "Log onto the computer and see if you can find anything useful on there."
+            jump computer
+
+
+    label banquet:
+        scene mansion 
+        l "Well, we're here."
+        e "Yeah..."
+        j "Wait Eileen, I don't know if Lorelai told you yet, but everyone's gonna be here today. And by everyone, I mean that includes Uncle Roland, who as we know has always been after Great Aunt Bellona's wealth. Keep your distance from him in case he tries to trick you into giving him your share of inheritance."
+        e "Right... Lorelai did...*thinking: I have no idea who Lorelai even is.*"
+        l "No, I didn't get the chance to tell you yet, but yeah, keep an eye out for him. Alright, I think we should go inside now."
+        scene inside of mansion
+        e "Woahh, it's huge! And it's so beautiful!"
+        l "It really is. But it's been the same since before we were born, it's interesting that you're just noticing it now..."
+        e "Uhhh... I guess I just didn't pay as much attention earlier! It really has been the same since then..."
+        m "Eileen, Joelle, and Lorelai, welcome."
+        l "Mrs. Halloway! It's good to see you."
+        m "It's good to see you too, my dears. I'm glad you're here, Roland just arrived a few minutes ago, and he keeps glancing around unsettlingly... Anyway, I need your help. Joelle, please check in with the caterers to make sure they'll be here on time. Lorelai, please check on the guest list with Mr. Primrose. And Eileen, please come with me."
+        e "Okay..."
+        scene staircase 
+        m "So, Eileen, how have you been lately?"
+        e "Good, Mrs..."
+        show Halloway glance
+        m "Halloway. It's not like you to forget my name, dear, after I raised you all these years. Is everything alright?"
+        e "Yes, everything's fine, ma'am..."
+        m ""
+
 
 
     # This ends the game.
 
-    # story - amnesiac [insert her actual name here] wakes up in a mansion she's never seen surrounded by ppl she's never met on the day the matriarch's will is to be read 
+    # story(1?) - amnesiac [insert her actual name here, not eileen but its undecided tbh] wakes up in a mansion she's never seen surrounded by ppl she's never met on the day the matriarch's will is to be read 
 
     return
