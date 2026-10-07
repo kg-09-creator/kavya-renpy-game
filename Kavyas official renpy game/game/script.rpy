@@ -135,6 +135,7 @@ label start:
         e "Joelle! Hi-"
         j "What are you doing in here...? I thought you'd be resting because of your headache."
         e "I, uh, wanted to see if I could find some medicine! But I'm all better now so I guess I don't need any!"
+        j "Oh, okay, great! Let's head to the banquet together, then, everyone's probably waiting for us!"
 
 
     label banquet:
@@ -171,9 +172,24 @@ label start:
         "Head to the Great Hall to avoid any further suspicion from Mrs. Halloway.":
             jump greet
 
-
-
-    # This ends the game.
+    label study:
+        e "I'll come with you to the study."
+        m "Very well then. Let's go."
+        e "Okay."
+        m "Did anything exciting happen lately? How's work? And school?"
+        e "Nothing much, work's good... school's going great too." 
+        m "Good to hear that school's going well... have you seen Hazel in a while?"
+        e "Uhhh... no. I haven't seen Hazel in a while..."
+        m "You're not really Eileen, are you, dear..."
+        e "Wh-what? I am Eileen! Mrs. Calloway, you've known me for so long..."
+        m "It's Halloway...and I could tell something was off from the moment you walked in, amazed at the grandness of the mansion as if you'd walked through those double doors for the first time in your life. So tell me... who are you and why are you here?"
+        e "I'm...Evelyn Kensington. I have no idea how or why everyone thinks I'm Eileen and why I was brought here, but...I agreed to come because I thought...maybe Eileen would inherit part of the fortune from Bellona."
+        m "Ah. That explains it. Well, Evelyn, I'm glad you told me the truth, but this means you cannot receive the fortune Bellona would have wanted Eileen to inherit. I must ask, though, that you continue to act as Eileen and remain at the banquet so that...people like Roland don't seek to usurp all that's left of her possessions."
+        e "I understand, ma'am."
+        m "Good. I don't know why or where Eileen disappeared, but for now I'd like you to return to the Great Hall and greet guests as she would have done."
+        
+        
+            # This ends the game.
 
     # story(1?) - amnesiac [insert her actual name here, not eileen but its undecided tbh] wakes up in a mansion she's never seen surrounded by ppl she's never met on the day the matriarch's will is to be read 
 
