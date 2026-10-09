@@ -80,7 +80,7 @@ label start:
         show eileen uncertain
         show joelle happy
         j "Hi Eileen! You ready for today?"
-        e "Hi- Joelle. Sure I am- but remind me again, what's today...?"
+        e "Uhh...hi. Sure I am- but remind me again, what's today...?"
         l ""
         return 
 
@@ -134,6 +134,16 @@ label start:
         j "What are you doing in here...? I thought you'd be resting because of your headache."
         e "I, uh, wanted to see if I could find some medicine! But I'm all better now so I guess I don't need any!"
         j "Oh, okay, great! Let's head to the banquet together, then, everyone's probably waiting for us!"
+        jump banquet
+
+    label computer:
+        e "Let me try to search up the meaning of this tattoo. Maybe it means something..."
+        j "Eileen? I'm back! We were halfway to the mansion when I realized I forgot my phone! Can you believe it?"
+        e "Joelle! Hi-"
+        j "What are you doing in here...? I thought you'd be resting because of your headache."
+        e "I, uh, wanted to see if I could find some medicine! But I'm all better now so I guess I don't need any!"
+        j "Oh, okay, great! Let's head to the banquet together, then, everyone's probably waiting for us!"
+        jump banquet
 
 
     label banquet:
@@ -206,8 +216,15 @@ label start:
         m "Alright, dear. I believe you. I was just teasing. Now, we're almost at the study. I want you to make sure the study is organized while I speak to the lawyers to see if everything's ready."
         e "Got it."
         m "Okay, everything seems to be in order. Everyone should be arriving in a few minutes."
-        w "We'll be commencing the will reading of Lady Bellona Callaghan now that everyone has arrived."
-        w "First off, her mansion and bank assets. Ms. Callaghan leaves those to her beloved niece, Eileen Callaghan..."
+        jump reading
+
+    label reading:
+        w "We'll now be commencing the will reading of Lady Bellona Callaghan now that everyone has arrived."
+        w "First off, her porcelain collection from the 1300s... Ms. Callaghan leaves those to her housekeeper, Aurora Halloway."
+        w "Her antique furniture and portraits, to Lorelai Callaghan. Her countryside manor, to Joelle Callaghan."
+        w "Her cars and other vehicles to Lola Callaghan. Her remaining ten properties excluding her mansion are to be divided between her children and her niece and nephew, being Lola, Ivy, Roland, Billie, and Joel Callaghan, in this order."
+        r "Hmph." 
+        w "And finally, her mansion and bank assets. Ms. Callaghan leaves those to her beloved niece, Eileen Callaghan..."
 
     menu: 
         "Tell them who you are. Last chance.":
@@ -220,9 +237,9 @@ label start:
 
     label truth: 
         e "I'm not Eileen Callaghan."
-        j "What?"
+        j "Wait what?"
         l "Huh?"
-        m "Of course you aren't."
+        m "What"
         l "What do you mean? Who are you then?"
         e "I'm...Evelyn Kensington. I don't know why everyone thinks I'm Eileen or why I'm here. I just thought I should tell you all before anything happened."
         r "Call the POLICE! SHE TRIED TO STEAL THE CALLAGHAN FORTUNE!"
@@ -246,7 +263,9 @@ label start:
         e "I understand, ma'am."
         m "Good. I don't know why or where Eileen disappeared, but for now I'd like you to return to the Great Hall and greet guests as she would have done to avoid raising suspicion."
         e "Okay."
-        scene great Hall
+        jump greet
+  
+    label greet:
         e "Welcome to the banquet, everyone."
         r "Is that you, Eileen?"
         e "Oh, uh... yup, it's me!"
@@ -281,10 +300,19 @@ label start:
     label noTrustR:
         e "I...don't think I'd be okay doing that..."
         r "Hmph. I'd suggest reconsidering that...like I said, you're not getting any part of the fortune without my help."
-        e "I think I'm good..."
-        r "Suit yourself. EVERYONE! I'D LIKE TO HAVE YOUR ATTENTION, PLEASE."
+        e "No, really, I think I'm good..."
+        r "Alright, suit yourself. EVERYONE! I'D LIKE TO HAVE YOUR ATTENTION, PLEASE."
         m "Roland? What happened?"
-        r "This girl here isn't Eileen. She's someone else, here for our beloved aunt's fortune."
+        r "This girl here isn't Eileen. She's someone else, larping as Eileen, here to steal our beloved aunt's possessions."
+        e "Uncle Roland...? I-"
+        r "She's decieved us on this important day!! Seize her!"
+        jump run 
+        return 
+
+    label trustR:
+        e "Okay... let's do it."
+        r "Wonderful. Let's go to the will reading now."
+        jump reading
             # This ends the game.
 
     # story(1?) - amnesiac [insert her actual name here, not eileen but its undecided tbh] wakes up in a mansion she's never seen surrounded by ppl she's never met on the day the matriarch's will is to be read 
