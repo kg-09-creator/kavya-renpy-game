@@ -176,19 +176,49 @@ label start:
         e "I'll come with you to the study."
         m "Very well then. Let's go."
         e "Okay."
-        m "Did anything exciting happen lately? How's work? And school?"
+        m "Has anything exciting happened lately? How's work? And school?"
         e "Nothing much, work's good... school's going great too." 
         m "Good to hear that school's going well... have you seen Hazel in a while?"
         e "Uhhh... no. I haven't seen Hazel in a while..."
         m "You're not really Eileen, are you, dear..."
         e "Wh-what? I am Eileen! Mrs. Calloway, you've known me for so long..."
-        m "It's Halloway...and I could tell something was off from the moment you walked in, amazed at the grandness of the mansion as if you'd walked through those double doors for the first time in your life. So tell me... who are you and why are you here?"
+        m "It's Halloway...and I could tell something was off from the moment you walked in, amazed at the grandness of the mansion as if you'd walked through those double doors for the first time in your life. And Hazel's the name of my sister, you- rather, Eileen, has never met her before. And school couldn't be going well, or, going at all, because you're on summer break from college. So tell me... who are you and why are you here?"
+        menu: 
+        "Tell her who you really are and that you're here for the fortune.":
+            jump tell her 
+        "Run before everyone else finds out.":
+            jump run
+        "Try to convince her that you really are Eileen."
+            jump convince
+        "Fake a horrible stomachache and drop to the ground in pain to distract her."
+            jump stomachache
+
+    label run:
+        e "I-"
+        show eileen run
+        m "Where are you going? Get back here or I'm calling the police!"
+        # You were arrested for impersonating Eileen and attempting  to steal the Callaghan fortune. The end.
+        show end message(run)
+        return
+
+    label convince:
+        # i dont like the portion below rn so imma just comment it out until i think of smth better
+        # e "I- what do you mean, Mrs. Halloway? I am Eileen! Who else could I be?"
+        # m "I don't know, but you're definitely not Eileen. Tell me who you really are...and maybe we'll make an alliance."
+        # e "Uhh...what sort of alliance?"
+        # m "Look, according to Callaghan tradition, if the housekeeper of Callaghan Manor is set to inherit something in the will, they will also inherit a share of the fortune that a relative would inherit in the event of their passing."
+        # e "And what does that mean...?"
+        # m "That if someone from the Callaghan family is set to recieve a portion of Bellona's fortune and passes away before the will is read, I would receive their share of inheritance. I'm suggesting that you help me make this happen in exchange for keeping your secret that you're not really Eileen."
+        # e "I- I wouldn't feel right doing something like that."    
+
+    label tell her:
         e "I'm...Evelyn Kensington. I have no idea how or why everyone thinks I'm Eileen and why I was brought here, but...I agreed to come because I thought...maybe Eileen would inherit part of the fortune from Bellona."
         m "Ah. That explains it. Well, Evelyn, I'm glad you told me the truth, but this means you cannot receive the fortune Bellona would have wanted Eileen to inherit. I must ask, though, that you continue to act as Eileen and remain at the banquet so that...people like Roland don't seek to usurp all that's left of her possessions."
         e "I understand, ma'am."
-        m "Good. I don't know why or where Eileen disappeared, but for now I'd like you to return to the Great Hall and greet guests as she would have done."
+        m "Good. I don't know why or where Eileen disappeared, but for now I'd like you to return to the Great Hall and greet guests as she would have done to avoid raising suspicion."
+        e "Okay."
         
-        
+
             # This ends the game.
 
     # story(1?) - amnesiac [insert her actual name here, not eileen but its undecided tbh] wakes up in a mansion she's never seen surrounded by ppl she's never met on the day the matriarch's will is to be read 
