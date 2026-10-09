@@ -6,7 +6,8 @@
 define e = Character("Eileen", color="#c8ffc8")
 define l = Character("Lorelai", color="#f9d6f2")
 define j = Character("Joelle", color="#abd2ff")
-define h = Character("Mrs. Halloway", color="#ffe8bf")
+define m = Character("Mrs. Halloway", color="#ffe8bf")
+define w = Character("Lawyer", color="#ffffff")
 
 
 # The game starts here.
@@ -18,10 +19,6 @@ label start:
     # images directory to show it.
     scene black
     "BZZZZZZ....BZZZZZ...BZZZZZ!!"
-
-    menu: 
-        "Wake up...":
-            jump wake
 
     label wake: 
         scene bg room with dissolve
@@ -130,7 +127,7 @@ label start:
     
     label drawers:
         e "Old letters, papers, nothing that relates to me...or Eileen. Wait... didn't Joelle mention a drivers' license? Let me see if I can find that..."
-        e "Here it is! Eileen Callaghan... she has the same birthday and face as me - which would explain why everyone thinks I'm Eileen... let me see if I can look into the DMV records to see when the processing for this happened. It might give me a better idea on who Eileen really is."
+        e "Here it is! Eileen Callaghan... she has the same birthday and face as me - which would explain why everyone thinks I'm Eileen! Let me see if I can look into the DMV records to see when the processing for this happened. It might give me a better idea on who Eileen really is."
         j "Eileen? I'm back! We were halfway to the mansion when I realized I forgot my phone! Can you believe it?"
         e "Joelle! Hi-"
         j "What are you doing in here...? I thought you'd be resting because of your headache."
@@ -143,7 +140,7 @@ label start:
         l "Well, we're here."
         e "Yeah..."
         j "Wait Eileen, I don't know if Lorelai told you yet, but everyone's gonna be here today. And by everyone, I mean that includes Uncle Roland, who as we know has always been after Great Aunt Bellona's wealth. Keep your distance from him in case he tries to trick you into giving him your share of inheritance."
-        e "Right... Lorelai did...*thinking: I have no idea who Lorelai even is.*"
+        e "Right... Lorelai did...*"
         l "No, I didn't get the chance to tell you yet, but yeah, keep an eye out for him. Alright, I think we should go inside now."
         scene inside of mansion
         e "Woahh, it's huge! And it's so beautiful!"
@@ -157,7 +154,7 @@ label start:
         m "So, Eileen, how have you been lately?"
         e "Good, Mrs..."
         show Halloway glance
-        m "Halloway. It's not like you to forget my name, dear, after I raised you all these years. Is everything alright?"
+        m "It's Mrs. Halloway. It's not like you to forget my name, dear, after I raised you all these years. Is everything alright?"
         e "Yes, everything's fine, ma'am..."
         m "Okay, just making sure. To prepare for tonight's banquet, I thought we'd decorate the place with flowers in memory of Lady Bellona. Since you were her favorite niece, I thought you could tell me what her favorite flowers were."
         e "Right, um... she really loved daffodils...?"
@@ -183,15 +180,15 @@ label start:
         m "You're not really Eileen, are you, dear..."
         e "Wh-what? I am Eileen! Mrs. Calloway, you've known me for so long..."
         m "It's Halloway...and I could tell something was off from the moment you walked in, amazed at the grandness of the mansion as if you'd walked through those double doors for the first time in your life. And Hazel's the name of my sister, you- rather, Eileen, has never met her before. And school couldn't be going well, or, going at all, because you're on summer break from college. So tell me... who are you and why are you here?"
-        menu: 
+       
+    menu: 
         "Tell her who you really are and that you're here for the fortune.":
-            jump tell her 
+            jump tell
         "Run before everyone else finds out.":
             jump run
-        "Try to convince her that you really are Eileen."
+        "Try to convince her that you really are Eileen.":
             jump convince
-        "Fake a horrible stomachache and drop to the ground in pain to distract her."
-            jump stomachache
+
 
     label run:
         e "I-"
@@ -203,17 +200,55 @@ label start:
 
     label convince:
         # i dont like the portion below rn so imma just comment it out until i think of smth better
-        # e "I- what do you mean, Mrs. Halloway? I am Eileen! Who else could I be?"
         # m "I don't know, but you're definitely not Eileen. Tell me who you really are...and maybe we'll make an alliance."
         # e "Uhh...what sort of alliance?"
         # m "Look, according to Callaghan tradition, if the housekeeper of Callaghan Manor is set to inherit something in the will, they will also inherit a share of the fortune that a relative would inherit in the event of their passing."
         # e "And what does that mean...?"
         # m "That if someone from the Callaghan family is set to recieve a portion of Bellona's fortune and passes away before the will is read, I would receive their share of inheritance. I'm suggesting that you help me make this happen in exchange for keeping your secret that you're not really Eileen."
-        # e "I- I wouldn't feel right doing something like that."    
+        # e "I- I wouldn't feel right doing something like that." 
+        e "I- what do you mean, Mrs. Halloway? I am Eileen! Who else could I be?"
+        m "I don't know, dear, but you definitely don't seem like Eileen to me."
+        e "I really am Eileen, I- I've just been kind of distracted lately... And I do have a friend named Hazel... we go to college together-"
+        m "Alright, dear. I believe you. I was just teasing. Now, we're almost at the study. I want you to make sure the study is organized while I speak to the lawyers to see if everything's ready."
+        e "Got it."
+        m "Okay, everything seems to be in order. Everyone should be arriving in a few minutes."
+        w "We'll be commencing the will reading of Lady Bellona Callaghan now that everyone has arrived."
+        w "First off, her mansion and bank assets. Ms. Callaghan leaves those to her beloved niece, Eileen Callaghan..."
 
-    label tell her:
+    menu: 
+        "Tell them who you are. Last chance.":
+            jump truth
+        "Walk away with a bazillion dollars and an enormous mansion.":
+            jump rich
+           
+    label rich:
+        "You're rich. They'll never have to know. The end."
+
+    label truth: 
+        e "I'm not Eileen Callaghan."
+        j "What?"
+        l "Huh?"
+        m "Of course you aren't."
+        l "What do you mean? Who are you then?"
+        e "I'm...Evelyn Kensington. I don't know why everyone thinks I'm Eileen or why I'm here. I just thought I should tell you all before anything happened."
+        r "Call the POLICE! SHE TRIED TO STEAL THE CALLAGHAN FORTUNE!"
+        e "No- I didn't- I-"
+    
+    menu: 
+        "Run before they call the police.":
+            jump run
+        "Try to explain yourself.":
+            jump explain
+
+    label explain:
+        e "I'm telling the truth. I genuinely don't know why everyone thinks I'm Eileen. Whenever I try to explain, people think I'm joking. But I'm not."
+        r "Regardless of what happened, we cannot allow you to remain here. Leave or we'll call the police."
+        "You leave without the fortune or figuring out how you woke up as Eileen. The end."
+        return 
+
+    label tellM:
         e "I'm...Evelyn Kensington. I have no idea how or why everyone thinks I'm Eileen and why I was brought here, but...I agreed to come because I thought...maybe Eileen would inherit part of the fortune from Bellona."
-        m "Ah. That explains it. Well, Evelyn, I'm glad you told me the truth, but this means you cannot receive the fortune Bellona would have wanted Eileen to inherit. I must ask, though, that you continue to act as Eileen and remain at the banquet so that...people like Roland don't seek to usurp all that's left of her possessions."
+        m "Ah. That explains it. Well, Evelyn, I'm glad you told me the truth, but you cannot receive the fortune Bellona would have wanted Eileen to inherit. I must ask, though, that you continue to act as Eileen and remain at the banquet so that...people like Roland don't seek to usurp all that's left of her possessions."
         e "I understand, ma'am."
         m "Good. I don't know why or where Eileen disappeared, but for now I'd like you to return to the Great Hall and greet guests as she would have done to avoid raising suspicion."
         e "Okay."
