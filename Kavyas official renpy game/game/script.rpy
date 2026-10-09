@@ -8,6 +8,7 @@ define l = Character("Lorelai", color="#f9d6f2")
 define j = Character("Joelle", color="#abd2ff")
 define m = Character("Mrs. Halloway", color="#ffe8bf")
 define w = Character("Lawyer", color="#ffffff")
+define r = Character("Uncle Roland", color="#f4d473")
 
 
 # The game starts here.
@@ -162,7 +163,7 @@ label start:
         l "Hi guys! Mr. Primrose mentioned you wanted to decorate the place with Great Aunt Bellona's favorite flowers, so I asked the florist for four dozen sunflowers."
         m "Sunflowers...Eileen mentioned she was fond of daffodils."
         l "That's odd... she never liked daffodils because they end up killing other plants if they're placed together. She favored sunflowers because of their ability to brighten up a room."
-        m "I thought so as well...anyway, Eileen, do you want to come with me to check on the study to make sure everything's ready for the will reading, or greet the guests in the Great Hall?"
+        m "I thought so as well...anyway, Eileen, do you want to come with me to check on the study to make sure everything's ready for the will reading, or help greet the guests in the Great Hall?"
     menu: 
         "Go with Mrs. Halloway to check on the will reading ceremony and maybe get a glimpse on whether Eileen is set to inherit anything.":
             jump study 
@@ -179,7 +180,8 @@ label start:
         e "Uhhh... no. I haven't seen Hazel in a while..."
         m "You're not really Eileen, are you, dear..."
         e "Wh-what? I am Eileen! Mrs. Calloway, you've known me for so long..."
-        m "It's Halloway...and I could tell something was off from the moment you walked in, amazed at the grandness of the mansion as if you'd walked through those double doors for the first time in your life. And Hazel's the name of my sister, you- rather, Eileen, has never met her before. And school couldn't be going well, or, going at all, because you're on summer break from college. So tell me... who are you and why are you here?"
+        m "It's Halloway...and I could tell something was off from the moment you walked in, amazed at the mansion as if you'd walked through those double doors for the first time in your life. And Hazel's the name of my sister, you- rather, Eileen, has never met her before. And school couldn't be going well, or, going at all, because you're on summer break from college."
+        m "So tell me... who are you and why are you here?"
        
     menu: 
         "Tell her who you really are and that you're here for the fortune.":
@@ -194,18 +196,10 @@ label start:
         e "I-"
         show eileen run
         m "Where are you going? Get back here or I'm calling the police!"
-        # You were arrested for impersonating Eileen and attempting  to steal the Callaghan fortune. The end.
-        show end message(run)
+        "You were arrested for impersonating Eileen and attempting to steal the Callaghan fortune. The end."
         return
 
     label convince:
-        # i dont like the portion below rn so imma just comment it out until i think of smth better
-        # m "I don't know, but you're definitely not Eileen. Tell me who you really are...and maybe we'll make an alliance."
-        # e "Uhh...what sort of alliance?"
-        # m "Look, according to Callaghan tradition, if the housekeeper of Callaghan Manor is set to inherit something in the will, they will also inherit a share of the fortune that a relative would inherit in the event of their passing."
-        # e "And what does that mean...?"
-        # m "That if someone from the Callaghan family is set to recieve a portion of Bellona's fortune and passes away before the will is read, I would receive their share of inheritance. I'm suggesting that you help me make this happen in exchange for keeping your secret that you're not really Eileen."
-        # e "I- I wouldn't feel right doing something like that." 
         e "I- what do you mean, Mrs. Halloway? I am Eileen! Who else could I be?"
         m "I don't know, dear, but you definitely don't seem like Eileen to me."
         e "I really am Eileen, I- I've just been kind of distracted lately... And I do have a friend named Hazel... we go to college together-"
@@ -222,7 +216,7 @@ label start:
             jump rich
            
     label rich:
-        "You're rich. They'll never have to know. The end."
+        "You're now super rich. They'll never have to know. The end."
 
     label truth: 
         e "I'm not Eileen Callaghan."
@@ -252,8 +246,45 @@ label start:
         e "I understand, ma'am."
         m "Good. I don't know why or where Eileen disappeared, but for now I'd like you to return to the Great Hall and greet guests as she would have done to avoid raising suspicion."
         e "Okay."
+        scene great Hall
+        e "Welcome to the banquet, everyone."
+        r "Is that you, Eileen?"
+        e "Oh, uh... yup, it's me!"
+        r "Haven't seen you in a while. How are things?"
+        e "Uh, good, thanks..."
+        r "Good, good...now, what do you think you'll be inheriting from Bellona?"
+        e "I, uh-"
+        r "Of course, I'd expect you'll be receiving the bulk of her fortune, being her favorite niece and all..."
+        e "I don't really know, uhh..."
+        r "The name's Uncle Roland...you never forget my name. You are really Eileen, aren't you?"
+    
+    menu: 
+        "Tell him who you are. Maybe he can help.":
+            jump tellR
+        "Make an excuse and get away. Didn't Joelle and Lorelai say to stay away from him...?":
+            jump excuse 
         
+    label tellR:
+        e "I'm...not Eileen. I'm Evelyn Kensington."
+        r "Thought you couldn't be Eileen. So... you here to get Bellona's fortune, or...?"
+        e "Yeah I- kinda wanted to see if Eileen would inherit anything from her..."
+        r "Mhm...hey, what do you say we make an alliance?"
+        e "Uhh...what do you mean?"
+        r "You and I split Eileen's inheritance 50-50, in exchange for me not telling anyone your identity. Because otherwise, you're not getting anything."
+    
+    menu: 
+        "Trust him.":
+            jump trustR
+        "Don't trust him.":
+            jump noTrustR
 
+    label noTrustR:
+        e "I...don't think I'd be okay doing that..."
+        r "Hmph. I'd suggest reconsidering that...like I said, you're not getting any part of the fortune without my help."
+        e "I think I'm good..."
+        r "Suit yourself. EVERYONE! I'D LIKE TO HAVE YOUR ATTENTION, PLEASE."
+        m "Roland? What happened?"
+        r "This girl here isn't Eileen. She's someone else, here for our beloved aunt's fortune."
             # This ends the game.
 
     # story(1?) - amnesiac [insert her actual name here, not eileen but its undecided tbh] wakes up in a mansion she's never seen surrounded by ppl she's never met on the day the matriarch's will is to be read 
