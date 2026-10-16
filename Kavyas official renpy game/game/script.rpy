@@ -253,7 +253,7 @@ label start:
 
     label explain:
         e "I'm telling the truth. I genuinely don't know why everyone thinks I'm Eileen. Whenever I try to explain, people think I'm joking. But I'm not."
-        r "Regardless of what happened, we cannot allow you to remain here. Leave or we'll call the police."
+        r "Excuses. Regardless of what happened, we cannot allow you to remain here. Leave or we'll call the police."
         "You leave without the fortune or figuring out how you woke up as Eileen. The end."
         return 
 
@@ -274,7 +274,7 @@ label start:
         r "Good, good...now, what do you think you'll be inheriting from Bellona?"
         e "I, uh-"
         r "Of course, I'd expect you'll be receiving the bulk of her fortune, being her favorite niece and all..."
-        e "I don't really know, uhh..."
+        e "I don't really know, Mr- uhh..."
         r "The name's Uncle Roland...you never forget my name. You are really Eileen, aren't you?"
     
     menu: 
@@ -300,7 +300,7 @@ label start:
     label noTrustR:
         e "I...don't think I'd be okay doing that..."
         r "Hmph. I'd suggest reconsidering that...like I said, you're not getting any part of the fortune without my help."
-        e "No, really, I think I'm good..."
+        e "No, really, I think I'm good. I don't even know how to feel about taking Eileen's inheritance."
         r "Alright, suit yourself. EVERYONE! I'D LIKE TO HAVE YOUR ATTENTION, PLEASE."
         m "Roland? What happened?"
         r "This girl here isn't Eileen. She's someone else, larping as Eileen, here to steal our beloved aunt's possessions."
