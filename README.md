@@ -4,6 +4,7 @@ My first visual novel!! :)
 You wake up as a girl named Eileen in a house you've never seen and surrounded by people you've never met on the day a matriarch's fortune is to be divided between her family, which includes Eileen.
 Throughout the game, you strive to answer a few questions:
 -    Who really is Eileen and why does everyone think you're her?
+-    Who really are you?
 -    How did you end up in her house?
 -    What will happen to her family's fortune? 
 
