@@ -114,9 +114,9 @@ label start:
         e "Actually, I think I'm gonna stay here today. I'm not feeling that great."
         l "What happened? Are you okay?"
         e "I'm fine, just a bad headache. I didn't sleep well tonight. You guys go ahead and let me know what happens. I might come later if I feel better."
-        j "Okay... we'll let everyone know why you weren't able to come. Rest well."
+        j "Okay... we'll let everyone know why you weren't able to come. We'll check in with you later. Rest well."
         show lj leaving for banquet
-        e "*thinking:* now that they're gone, i'll try to look around and see if i can find any clues as to how i got here and why everyone thinks i'm eileen. i'll start with the office room."
+        e "now that they're gone, i'll try to look around and see if i can find any clues as to how i got here and why everyone thinks i'm eileen. i'll start with the office room."
         scene office
         e "Where should I look first?"
     
@@ -138,6 +138,7 @@ label start:
 
     label computer:
         e "Let me try to search up the meaning of this tattoo. Maybe it means something..."
+        e "Huh. They're... connected to the FBI?? Am I - or Eileen - a spy?"
         j "Eileen? I'm back! We were halfway to the mansion when I realized I forgot my phone! Can you believe it?"
         e "Joelle! Hi-"
         j "What are you doing in here...? I thought you'd be resting because of your headache."
