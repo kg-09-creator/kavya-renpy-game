@@ -81,8 +81,9 @@ label start:
         show joelle happy
         j "Hi Eileen! You ready for today?"
         e "Uhh...hi. Sure I am- but remind me again, what's today...?"
-        l ""
-        return 
+        l "Don't you remember?"
+        e "I- no..."
+        jump event 
 
     label downstairs: 
 
@@ -97,7 +98,11 @@ label start:
             e "Great... if only I knew why this is such a big day for me..."
             j "Did you forget? It's the day you finally get your drivers' license!"
             e "Right...my driver's license...!"
-            j "No, I'm just kidding - you got that last week, remember? But jokes aside, it is a big day. Today's the day Great Aunt Bellona's will is to be read. We have to host the memorial banquet tonight at her mansion - and we need to leave in an hour to oversee the preparations."
+            j "No, I'm just kidding - you got that last week, remember? But jokes aside, it is a big day."
+            jump event 
+
+    label event:
+            j "Today's the day Great Aunt Bellona's will is to be read. We have to host the memorial banquet tonight at her mansion - and we need to leave in an hour to oversee the preparations."
             e "Right... Great Aunt Bellona. And the banquet today - how could I forget?"
             j "Yup. The big day where we see who she left her fortune to."
             e "Right... wait, fortune?"
