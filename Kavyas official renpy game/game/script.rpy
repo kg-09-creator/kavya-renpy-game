@@ -289,6 +289,11 @@ label start:
             jump tellR
         "Make an excuse and get away. Didn't Joelle and Lorelai say to stay away from him...?":
             jump excuse 
+
+    label excuse:
+        e "Uhh... Of course I am, Uncle Roland! Ha, ha! Who else could I be? Um, I think it's time for the will reading, we should really get going."
+        r "Hmmm... alright."
+        jump study 
         
     label tellR:
         e "I'm...not Eileen. My name's Evelyn Kensington."
@@ -310,9 +315,9 @@ label start:
         e "No, really, I think I'm good. I don't even know how to feel about taking Eileen's inheritance."
         r "Alright, suit yourself. EVERYONE! I'D LIKE TO HAVE YOUR ATTENTION, PLEASE."
         m "Roland? What happened?"
-        r "This girl here isn't Eileen. She's someone else, larping as Eileen, here to steal our beloved aunt's possessions."
-        e "Uncle Roland...? I-"
-        r "She's decieved us on this important day!! Seize her!"
+        r "This girl here isn't Eileen. She's someone else, pretending to be Eileen, here to steal our beloved aunt's possessions."
+        e "Roland...? I-"
+        r "She's decieved us and tried to ruin our beloved aunt! Seize her!"
         jump run 
         return 
 
@@ -322,6 +327,6 @@ label start:
         jump reading
             # This ends the game.
 
-    # story(1?) - amnesiac [insert her actual name here, not eileen but its undecided tbh] wakes up in a mansion she's never seen surrounded by ppl she's never met on the day the matriarch's will is to be read 
+    # story(1?) - amnesiac [insert her actual name here, not eileen but its undecided tbh, for now it's evelyn kensington] wakes up in a mansion she's never seen surrounded by ppl she's never met on the day the matriarch's will is to be read 
 
     return
