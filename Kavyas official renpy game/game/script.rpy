@@ -143,7 +143,7 @@ label start:
 
     label computer:
         e "Let me try to search up the meaning of this tattoo. Maybe it means something..."
-        e "Huh. They're... connected to the FBI?? Am I - or Eileen - a spy?"
+        e "Huh. It's... connected to the FBI?? Am I - or Eileen - a spy or something?"
         j "Eileen? I'm back! We were halfway to the mansion when I realized I forgot my phone! Can you believe it?"
         e "Joelle! Hi-"
         j "What are you doing in here...? I thought you'd be resting because of your headache."
@@ -156,7 +156,7 @@ label start:
         scene mansion 
         l "Well, we're here."
         e "Yeah..."
-        j "Wait Eileen, I don't know if Lorelai told you yet, but everyone's gonna be here today. And by everyone, I mean that includes Uncle Roland, who as we know has always been after Great Aunt Bellona's wealth. Keep your distance from him in case he tries to trick you into giving him your share of inheritance."
+        j "Wait Eileen, I don't know if Lorelai told you yet, but everyone's gonna be here today. And by everyone, I mean that includes Uncle Roland, who as we know has always been after Great Aunt Bellona's wealth. Try to stay away from him in case he tries to trick you into giving him your share of inheritance or something."
         e "Right... Lorelai did...*"
         l "No, I didn't get the chance to tell you yet, but yeah, keep an eye out for him. Alright, I think we should go inside now."
         scene inside of mansion
