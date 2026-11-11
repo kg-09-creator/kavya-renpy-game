@@ -228,9 +228,9 @@ label start:
         w "We'll now be commencing the will reading of Lady Bellona Callaghan now that everyone has arrived."
         w "First off, her porcelain collection from the 1300s... Ms. Callaghan leaves those to her housekeeper, Aurora Halloway."
         w "Her antique furniture and portraits, to Lorelai Callaghan. Her countryside manor, to Joelle Callaghan."
-        w "Her cars and other vehicles to Lola Callaghan. Her remaining ten properties excluding her mansion are to be divided between her children and her niece and nephew, being Lola, Ivy, Roland, Billie, and Joel Callaghan, in this order."
+        w "Her cars and other vehicles to Maddy Callaghan. Her bank assets and twelve properties, excluding her mansion, are to be divided between her children as well as her niece and nephew, being Lola, Ivy, Roland, Billie, and Joel Callaghan, in this order."
         r "Hmph." 
-        w "And finally, her mansion and bank assets. Ms. Callaghan leaves those to her beloved niece, Eileen Callaghan..."
+        w "And finally, her mansion and everything else in it. Ms. Callaghan leaves those to her beloved niece, Eileen Callaghan..."
 
     menu: 
         "Tell them who you are. Last chance.":
@@ -245,7 +245,7 @@ label start:
         e "I'm not Eileen Callaghan."
         j "Wait what?"
         l "Huh?"
-        m "What"
+        m "What-"
         l "What do you mean? Who are you then?"
         e "I'm...Evelyn Kensington. I don't know why everyone thinks I'm Eileen or why I'm here. I just thought I should tell you all before anything happened."
         r "Call the POLICE! SHE TRIED TO STEAL THE CALLAGHAN FORTUNE!"
@@ -265,14 +265,14 @@ label start:
 
     label tellM:
         e "I'm...Evelyn Kensington. I have no idea how or why everyone thinks I'm Eileen and why I was brought here, but...I agreed to come because I thought...maybe Eileen would inherit part of the fortune from Bellona."
-        m "Ah. That explains it. Well, Evelyn, I'm glad you told me the truth, but you cannot receive the fortune Bellona would have wanted Eileen to inherit. I must ask, though, that you continue to act as Eileen and remain at the banquet so that...people like Roland don't seek to usurp all that's left of her possessions."
+        m "Ah. That explains it. Well, Evelyn, I'm glad you told me the truth, but, obviously, you cannot receive the fortune Bellona would have wanted Eileen to inherit. I must ask, though, that you continue to act as Eileen for the remainder of the banquet so that...people like Roland- don't seek to usurp all that's left of her possessions."
         e "I understand, ma'am."
         m "Good. I don't know why or where Eileen disappeared, but for now I'd like you to return to the Great Hall and greet guests as she would have done to avoid raising suspicion."
         e "Okay."
         jump greet
   
     label greet:
-        e "Welcome to the banquet, everyone."
+        e "Um, welcome to the banquet, everyone."
         r "Is that you, Eileen?"
         e "Oh, uh... yup, it's me!"
         r "Haven't seen you in a while. How are things?"
@@ -280,7 +280,7 @@ label start:
         r "Good, good...now, what do you think you'll be inheriting from Bellona?"
         e "I, uh-"
         r "Of course, I'd expect you'll be receiving the bulk of her fortune, being her favorite niece and all..."
-        e "I don't really know, Mr- uhh..."
+        e "I'm not really sure, Mr- uhh..."
         r "The name's Uncle Roland...you never forget my name. You are really Eileen, aren't you?"
     
     menu: 
@@ -290,10 +290,10 @@ label start:
             jump excuse 
         
     label tellR:
-        e "I'm...not Eileen. I'm Evelyn Kensington."
-        r "Thought you couldn't be Eileen. So... you here to get Bellona's fortune, or...?"
+        e "I'm...not Eileen. My name's Evelyn Kensington."
+        r "Huh. Thought you couldn't be Eileen. So... are you here for Bellona's fortune, or...?"
         e "Yeah I- kinda wanted to see if Eileen would inherit anything from her..."
-        r "Mhm...hey, what do you say we make an alliance?"
+        r "Mhm...interesting. Hey, what do you say we make an alliance?"
         e "Uhh...what do you mean?"
         r "You and I split Eileen's inheritance 50-50, in exchange for me not telling anyone your identity. Because otherwise, you're not getting anything."
     
