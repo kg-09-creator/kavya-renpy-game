@@ -196,7 +196,8 @@ label start:
         e "Uhhh... no. I haven't seen Hazel in a while..."
         m "You're not really Eileen, are you, dear..."
         e "Wh-what? I am Eileen! Mrs. Calloway, you've known me for so long..."
-        m "It's Halloway...and I could tell something was off from the moment you walked in, amazed at the mansion as if you'd walked through those double doors for the first time in your life. And Hazel's the name of my sister, you- rather, Eileen, has never met her before. And school couldn't be going well, or, going at all, because you're on summer break from college."
+        m "It's Halloway...and I could tell something was off from the moment you walked in, amazed at the mansion as if you'd walked through those double doors for the first time in your life."
+        m "And Hazel's the name of my sister, you- rather, Eileen, has never met her before. And school couldn't be going well, or, going at all, because you're on summer break from college."
         m "So tell me... who are you and why are you here?"
        
     menu: 
